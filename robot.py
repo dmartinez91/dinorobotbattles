@@ -1,3 +1,6 @@
+
+
+
 class Robot():
     def __init__(self, name, weapon):
         self.robot_name = name
@@ -10,7 +13,3 @@ class Robot():
     def attack(self, dinosaur):
         self.attacking = dinosaur
 
-
-robot1 = Robot('mecha godzilla', Weapon("RayGun", 5))
-
-print(robot1)
