@@ -16,5 +16,4 @@ class Fleet():
 
    
 test = Fleet()
-print("Hello")
 

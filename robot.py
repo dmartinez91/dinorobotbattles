@@ -1,6 +1,4 @@
 
-
-
 class Robot():
     def __init__(self, name, weapon):
         self.robot_name = name
@@ -11,5 +9,5 @@ class Robot():
         return f' {self.robot_name} {self.health} {self.robot_weapon}' 
     
     def attack(self, dinosaur):
-        self.attacking = dinosaur
+        dinosaur.health -= self.robot_weapon.AP
 
