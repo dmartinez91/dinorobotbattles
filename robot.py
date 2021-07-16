@@ -1,5 +1,5 @@
 
-class Robot():
+class Robot:
     def __init__(self, name, weapon):
         self.robot_name = name
         self.health = 40
@@ -10,5 +10,5 @@ class Robot():
     
     def attack(self, dinosaur):
         dinosaur.health -= self.robot_weapon.AP
-        print(f'robot took {self.robot_weapon.AP} dino has ${dinosaur.health} remaining')
+        print(f'{self.robot_name} used his {self.robot_weapon.weapon_name} and did {self.robot_weapon.AP} {dinosaur} has {dinosaur.health} remaining')
 

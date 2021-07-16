@@ -2,7 +2,7 @@ from robot import Robot
 from weapon import Weapon
 
 
-class Fleet():
+class Fleet:
     def __init__(self):
         
         self.robot_list = []

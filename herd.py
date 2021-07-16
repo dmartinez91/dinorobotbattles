@@ -1,6 +1,6 @@
 from dinosaur import Dinosaur
 
-class Herd():
+class Herd:
     def __init__(self):
         self.dino_list = []
         self.create_herd()
