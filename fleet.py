@@ -15,5 +15,5 @@ class Fleet():
         self.robot_list.append(Robot('Mecha Godzilla', Weapon('lasers', 8)))
 
    
-test = Fleet()
+
 

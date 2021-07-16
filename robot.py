@@ -10,4 +10,5 @@ class Robot():
     
     def attack(self, dinosaur):
         dinosaur.health -= self.robot_weapon.AP
+        print(f'robot took {self.robot_weapon.AP} dino has ${dinosaur.health} remaining')
 

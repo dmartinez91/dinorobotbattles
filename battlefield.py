@@ -1,3 +1,5 @@
+from robot import Robot
+from dinosaur import Dinosaur
 from fleet import Fleet
 from herd import Herd
 
@@ -8,7 +10,9 @@ class Battlefield():
         self.herd = Herd()
 
     def run_game(self):
-        self.displayGreeting()    
+        self.displayGreeting()
+        self.battle()
+        self.display_winners()    
 
     def displayGreeting(self):
         print('welcome to the simulation')
@@ -19,7 +23,7 @@ class Battlefield():
         # self.display_winners()
 
     def dino_turn(self, dinosaur):
-        self.herd.dino_list[0].attack(self.fleet.robot_list[0])
+        dinosaur = self.herd.dino_list[0].attack(self.fleet.robot_list[0])
         self.herd.dino_list[1].attack(self.fleet.robot_list[1])
         self.herd.dino_list[2].attack(self.fleet.robot_list[2])
 
@@ -29,4 +33,6 @@ class Battlefield():
         self.fleet.robot_list[2].attack(self.herd.dino_list[2])
 
     # def display_winners(self):
-    #     while 
+    #     # create if statement to detemrine the winner of the battle
+    #     # if herd health is 0 then fleet wins, viceversa 
+        
