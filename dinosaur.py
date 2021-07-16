@@ -11,5 +11,5 @@ class Dinosaur:
 
     def attack(self, robot):
         robot.health -= self.bite
-    
+        
         print(f'{self.dino_name} attacked and did  {self.bite} damage to {robot.robot_name}. {robot.robot_name} has {robot.health} remaining')

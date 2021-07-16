@@ -15,11 +15,14 @@ class Battlefield:
         #self.display_winners()    
 
     def displayGreeting(self):
-        print('welcome to the simulation')
+        print('WELCOME TO DINO VS ROBOTS, WHO WILL WIN?!')
 
     def battle(self):
-        self.dino_turn()
-        self.robo_turn()
+        i = 0
+        for i in range(len(self.herd.dino_list)):
+            while self.herd.dino_list[0].health != 0 and self.fleet.robot_list[0].health != 0:
+                self.dino_turn()
+                self.robo_turn()
         # self.display_winners()
 
     def dino_turn(self):
@@ -37,3 +40,5 @@ class Battlefield:
     #     # create if statement to detemrine the winner of the battle
     #     # if herd health is 0 then fleet wins, viceversa 
         
+    # create method that checks to see the value of health and then eliminates combatents
+
