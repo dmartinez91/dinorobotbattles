@@ -12,7 +12,7 @@ class Battlefield:
     def run_game(self):
         self.displayGreeting()
         self.battle()
-        #self.display_winners()    
+        self.winner()   
 
     def displayGreeting(self):
         print('WELCOME TO DINO VS ROBOTS, WHO WILL WIN?!')
@@ -20,7 +20,7 @@ class Battlefield:
     def battle(self):
         i = 0
         for i in range(len(self.herd.dino_list)):
-            while self.herd.dino_list[0].health != 0 and self.fleet.robot_list[0].health != 0:
+            while self.herd.dino_list[i].health != 0 and self.fleet.robot_list[i].health != 0:
                 self.dino_turn()
                 self.robo_turn()
         # self.display_winners()
@@ -35,10 +35,15 @@ class Battlefield:
         self.fleet.robot_list[1].attack(self.herd.dino_list[1])
         self.fleet.robot_list[2].attack(self.herd.dino_list[2])
 
+    def winner(self):
+        i = 0
+        for i in range(len(self.fleet.robot_list)):
+            if self.fleet.robot_list[i].health == 0:
+                print(f'{self.fleet.robot_list[i].robot_name} has been defeated!!')
+            else:
+                print(f'{self.herd.dino_list[i].dino_name} has been defeated!')
+            
 
-    # def display_winners(self):
-    #     # create if statement to detemrine the winner of the battle
-    #     # if herd health is 0 then fleet wins, viceversa 
         
     # create method that checks to see the value of health and then eliminates combatents
 
